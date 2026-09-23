@@ -1,60 +1,58 @@
-<svg viewBox="0 0 880 420" role="img" aria-label="어텐션 데이터 흐름: 위성·해양관측·기상 데이터가 시공간 큐브로 합쳐지고, 모델 예측과 문헌 규칙이 나란히 대시보드·앱·엣지로 전달된다" xmlns="http://www.w3.org/2000/svg" width="880" height="420" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
-  <rect x="0" y="0" width="880" height="420" fill="#FFF9EC"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" width="880" height="480" role="img" aria-label="어텐션 데이터 흐름: 위성·해양관측·기상 데이터가 시공간 큐브로 합쳐지고, 모델 예측과 문헌 규칙이 나란히 위험도로 모여 관제 대시보드·어민 앱·엣지로 전달된다" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <rect x="0" y="0" width="880" height="480" fill="#FFF9EC"/>
   <defs>
     <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" fill="#1E1B2E"/>
     </marker>
     <style>
-      .bx{fill:#FFF9EC;stroke:#1E1B2E;stroke-width:2.5;rx:10}
+      .bx{fill:#FFF9EC;stroke:#1E1B2E;stroke-width:2.5}
       .t{fill:#1E1B2E;font-size:15px;font-weight:600}
       .s{fill:#6b6880;font-size:12.5px}
+      .h{fill:#1E1B2E;font-size:13px;font-weight:700}
       .ln{stroke:#1E1B2E;stroke-width:2;fill:none;marker-end:url(#ar)}
       .lbl{fill:#8E8AA6;font-size:11.5px;font-style:italic}
     </style>
   </defs>
-  <!-- 입력 -->
-  <text x="20" y="28" class="s" style="font-weight:700">① 입력 — 출처가 제각각</text>
-  <rect class="bx" x="20" y="44" width="180" height="56"/>
-  <text x="36" y="68" class="t">위성</text><text x="36" y="88" class="s">표층수온 · 클로로필</text>
-  <rect class="bx" x="20" y="112" width="180" height="56"/>
-  <text x="36" y="136" class="t">해양 관측</text><text x="36" y="156" class="s">영양염 · 용존산소 · 염분</text>
-  <rect class="bx" x="20" y="180" width="180" height="56"/>
-  <text x="36" y="204" class="t">기상</text><text x="36" y="224" class="s">기온 · 일사 · 바람</text>
-  <!-- 큐브 -->
-  <path class="ln" d="M200 72 L252 128"/><path class="ln" d="M200 140 L252 140"/><path class="ln" d="M200 208 L252 152"/>
-  <rect class="bx" x="256" y="104" width="172" height="72" style="fill:#FFF3D1"/>
-  <text x="272" y="132" class="t">시공간 큐브</text>
-  <text x="272" y="152" class="s">같은 격자 · 같은 시간축</text>
-  <text x="272" y="168" class="s">으로 정렬</text>
-  <text x="258" y="196" class="lbl">일의 절반이 여기 있었다</text>
-  <!-- 두 갈래 -->
-  <path class="ln" d="M428 128 L488 92"/>
-  <path class="ln" d="M428 156 L488 196"/>
-  <rect class="bx" x="492" y="60" width="180" height="60"/>
-  <text x="508" y="84" class="t">모델 예측</text><text x="508" y="104" class="s">시공간 어텐션 · 7일</text>
-  <rect class="bx" x="492" y="166" width="180" height="60" style="fill:#FDEDEA"/>
-  <text x="508" y="190" class="t">문헌 규칙</text><text x="508" y="210" class="s">영양염 임계 · 수온 지속일</text>
-  <text x="492" y="246" class="lbl">둘을 나란히 — 모델만 믿게 하지 않으려고</text>
-  <!-- 출력 -->
-  <path class="ln" d="M672 90 L732 128"/>
-  <path class="ln" d="M672 196 L732 160"/>
-  <rect class="bx" x="736" y="104" width="124" height="72"/>
-  <text x="752" y="130" class="t">위험도</text><text x="752" y="150" class="s">어장별 7일</text>
-  <text x="752" y="167" class="s">등급 + 근거</text>
-  <!-- 소비처 -->
-  <path class="ln" d="M798 176 L798 214"/>
-  <text x="20" y="300" class="s" style="font-weight:700">② 보는 쪽</text>
-  <rect class="bx" x="560" y="218" width="120" height="48"/>
-  <text x="576" y="248" class="t">관제 대시보드</text>
-  <rect class="bx" x="694" y="218" width="88" height="48"/>
-  <text x="710" y="248" class="t">어민 앱</text>
-  <rect class="bx" x="796" y="218" width="64" height="48"/>
-  <text x="812" y="248" class="t">엣지</text>
-  <path class="ln" d="M780 200 L688 216"/><path class="ln" d="M744 200 L650 216"/>
-  <!-- 하단 주석 -->
-  <rect x="20" y="300" width="840" height="100" rx="10" fill="none" stroke="#F1E7CF" stroke-width="2"/>
-  <text x="40" y="330" class="t">기록으로 남은 것</text>
-  <text x="40" y="354" class="s">· 재구현 실험은 반드시 대조군을 같이 돌린다 — 기존 기준선이 재현 안 되면 그 실험의 모든 수치를 버린다</text>
-  <text x="40" y="374" class="s">· "12건 중 11건 통과"는 재검증 결과 8건이었다. 숫자는 한 번 더 세본다</text>
-  <text x="40" y="394" class="s">· 폴백 기본값은 설정 불일치를 숨긴다 — 정직하게 짠 모듈만 죽는다</text>
+  <text x="20" y="26" class="h">① 들어오는 것 — 출처가 제각각</text>
+  <rect class="bx" rx="10" x="20" y="40" width="180" height="56"/>
+  <text x="36" y="64" class="t">위성</text><text x="36" y="84" class="s">표층수온 · 클로로필</text>
+  <rect class="bx" rx="10" x="20" y="108" width="180" height="56"/>
+  <text x="36" y="132" class="t">해양 관측</text><text x="36" y="152" class="s">영양염 · 용존산소 · 염분</text>
+  <rect class="bx" rx="10" x="20" y="176" width="180" height="56"/>
+  <text x="36" y="200" class="t">기상</text><text x="36" y="220" class="s">기온 · 일사 · 바람</text>
+  <path class="ln" d="M204 68 L250 120"/>
+  <path class="ln" d="M204 136 L250 136"/>
+  <path class="ln" d="M204 204 L250 152"/>
+  <rect class="bx" rx="10" x="256" y="100" width="172" height="76" fill="#FFF3D1"/>
+  <text x="272" y="128" class="t">시공간 큐브</text>
+  <text x="272" y="148" class="s">같은 격자 · 같은 시간축</text>
+  <text x="272" y="166" class="s">으로 정렬</text>
+  <text x="256" y="196" class="lbl">일의 절반이 여기 있었다</text>
+  <path class="ln" d="M432 124 L486 92"/>
+  <path class="ln" d="M432 152 L486 188"/>
+  <rect class="bx" rx="10" x="490" y="58" width="184" height="60"/>
+  <text x="506" y="82" class="t">모델 예측</text><text x="506" y="102" class="s">시공간 어텐션 · 7일</text>
+  <rect class="bx" rx="10" x="490" y="160" width="184" height="60" fill="#FDEDEA"/>
+  <text x="506" y="184" class="t">문헌 규칙</text><text x="506" y="204" class="s">영양염 임계 · 수온 지속일</text>
+  <text x="490" y="240" class="lbl">둘을 나란히 — 모델만 믿게 하지 않으려고</text>
+  <path class="ln" d="M678 88 L730 118"/>
+  <path class="ln" d="M678 190 L730 156"/>
+  <rect class="bx" rx="10" x="734" y="102" width="126" height="72"/>
+  <text x="750" y="128" class="t">위험도</text>
+  <text x="750" y="148" class="s">어장별 7일</text>
+  <text x="750" y="165" class="s">등급 + 근거</text>
+  <text x="490" y="286" class="h">② 보는 쪽 — 같은 예측, 다른 말투</text>
+  <path class="ln" d="M780 178 L620 296"/>
+  <path class="ln" d="M792 178 L740 296"/>
+  <path class="ln" d="M804 178 L826 296"/>
+  <rect class="bx" rx="10" x="490" y="300" width="146" height="52"/>
+  <text x="506" y="331" class="t">관제 대시보드</text>
+  <rect class="bx" rx="10" x="652" y="300" width="112" height="52"/>
+  <text x="668" y="331" class="t">어민 앱</text>
+  <rect class="bx" rx="10" x="780" y="300" width="80" height="52"/>
+  <text x="796" y="331" class="t">엣지</text>
+  <rect x="20" y="380" width="840" height="86" rx="10" fill="none" stroke="#F1E7CF" stroke-width="2"/>
+  <text x="40" y="406" class="h">기록으로 남은 것</text>
+  <text x="40" y="428" class="s">· 재구현 실험은 반드시 대조군을 같이 돌린다 — 기존 기준선이 재현 안 되면 그 실험의 모든 수치를 버린다</text>
+  <text x="40" y="448" class="s">· "12건 중 11건 통과"는 재검증 결과 8건이었다 · 폴백 기본값은 설정 불일치를 숨긴다</text>
 </svg>
