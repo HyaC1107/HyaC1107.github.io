@@ -97,3 +97,19 @@ main .pagination-loader-container {
 main .gsc-loading-image {
   background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
 }
+
+/* ── 또리 로그 덧칠 — 종이색 배경에 맞춤 ── */
+main {
+  --color-canvas-default: #FFF9EC;
+  --color-canvas-subtle: #FBF3E2;
+  --color-canvas-overlay: #FFF9EC;
+  --color-canvas-inset: #FBF3E2;
+  --color-border-default: #E7D9BC;
+  --color-border-muted: #EFE3CA;
+  --color-fg-default: #1E1B2E;
+  --color-fg-muted: #6b6880;
+  --color-accent-fg: #D9483B;
+  --color-btn-bg: #FFF3D1;
+  --color-btn-border: #1E1B2E;
+}
+body, .gsc-main { background: transparent; }
